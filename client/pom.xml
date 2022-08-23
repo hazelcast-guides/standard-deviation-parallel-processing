@@ -34,9 +34,9 @@
 
     <repositories>
 		<repository>
-				<id>hazelcast-ee</id>
-				<name>Sonatype Repository</name>
-				<url>https://repository.hazelcast.com/release</url>
+			<id>hazelcast-ee</id>
+			<name>Sonatype Repository</name>
+			<url>https://repository.hazelcast.com/release</url>
 		</repository>
 	</repositories>
 
@@ -50,7 +50,7 @@
                     <execution>
                         <id>standard-deviation</id>
                         <goals>
-                            <goal>java</goal>
+							<goal>java</goal>
                         </goals>
                         <configuration>
                             <mainClass>your.company.name.Application</mainClass>
