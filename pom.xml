@@ -30,20 +30,20 @@
 		<maven.assembly.plugin.version>3.1.1</maven.assembly.plugin.version>
 		<jdk.version>1.8</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.assembly.plugin.version>3.1.1</maven.assembly.plugin.version>
+		<maven.assembly.plugin.version>3.1.1</maven.assembly.plugin.version>
 	</properties>
 
 	<build>
 		<plugins>
-				<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-compiler-plugin</artifactId>
-						<version>${maven.compiler.plugin.version}</version>
-						<configuration>
-								<source>${jdk.version}</source>
-								<target>${jdk.version}</target>
-						</configuration>
-				</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
