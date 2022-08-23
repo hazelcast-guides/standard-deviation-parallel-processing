@@ -111,7 +111,7 @@ TIP: The code in this tutorial is available as a link:{github-directory}[sample 
 
 You'll need the following to complete this tutorial:
 
-- A xref:cloud:ROOT:create-serverless-cluster.adoc[Serverless cluster].
+- A xref:cloud:ROOT:create-serverless-cluster.adoc[{hazelcast-cloud} Serverless cluster].
 - link:https://git-scm.com/book/en/v2/Getting-Started-Installing-Git[Git]
 - link:https://maven.apache.org/install.html[Maven]
 - JDK 8, 9, or 11 installed and set up as the `JAVA_HOME` environment variable.
@@ -226,7 +226,7 @@ link:{github-directory}/client/src/main/java/your/company/name/SeniorDeveloper.j
 
 In this step, you'll use the Hazelcast {hazelcast-cloud} Maven plugin to package the cluster-side modules into a single JAR file and upload that file to your cluster.
 
-. Open the `pom.xml` file in the `hazelcast-cloud-code-samples/compute/standard-deviation/cluster-side` directory.
+. Open the `pom.xml` file in the `cluster-side/` directory.
 
 . Configure the Maven plugin with values for the following elements:
 +
@@ -248,7 +248,7 @@ include::cloud:ROOT:developer.adoc[tag=create]
 include::standard-deviation:example$cluster-side/pom.xml[tag=maven-plugin]
 ----
 
-. Change into the `hazelcast-cloud-code-samples/compute/standard-deviation/cluster-side` directory.
+. Change into the `cluster-side/` directory.
 
 . Execute the following goal of the Maven plugin to package the project into a JAR file and deploy that file to your cluster:
 +
@@ -275,7 +275,7 @@ Now that the cluster-side modules are ready to use, you can run the client to tr
 
 . Leave the Hazelcast {hazelcast-cloud} console open. You'll need some of these details in next steps.
 
-. Change into the `hazelcast-cloud-code-samples/compute/standard-deviation/client` directory.
+. Change into the `client/` directory.
 
 . Execute the client.
 +
