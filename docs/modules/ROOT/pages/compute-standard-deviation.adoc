@@ -147,18 +147,18 @@ cd standard-deviation-parallel-processing
 
 The code is separated into two parts:
 
-- The `client` directory contains the client application that connects to the cluster and runs both the junior developer code and the senior developer code.
-- The `cluster-side` directory contains the classes that need to be uploaded to the cluster to allow the cluster to store and process the standard deviation of customer satisfaction scores. Only the senior developer code triggers the processing of customer satisfaction scores on the cluster. The junior developer code processes them on the client side.
+- The `client/` directory contains the client application that connects to the cluster and runs both the junior developer code and the senior developer code.
+- The `cluster-side/` directory contains the classes that need to be uploaded to the cluster to allow the cluster to store and process the standard deviation of customer satisfaction scores. Only the senior developer code triggers the processing of customer satisfaction scores on the cluster. The junior developer code processes them on the client side.
 
-The important parts to understand are the differences between the junior developer code and the senior developer code.
+The important part to understand is the difference between the junior developer code and the senior developer code.
 
-In each example, the cluster stores five `Customer` objects, and the simplest Hazelcast cluster has one member.
+In each example, the cluster stores five `Customer` objects.
 
-The junior developer code must request five integers from the cluster in order to run the calculation. The senior developer code runs the calculation on the cluster and returns one double across the network. So the choice is five network transfers or one.
+The junior developer code requests five integers from the cluster in order to run the calculation. The senior developer code runs the calculation on the cluster, which returns one double from each member.
 
-Now imagine that you have 1,000,000 `Customer` objects stored on two Hazelcast members. One member could handle this volume but wouldn't be resilient to failure. So the junior developer approach now requests 1,000,000 integers from the cluster across the network and the senior developer approach retrieves two doubles, one from each member.
+Now imagine that you have 1,000,000 `Customer` objects stored in the cluster. The junior developer approach now requests 1,000,000 integers from the cluster across the network and the senior developer approach still returns one double from each member.
 
-It's clear that if data volumes increase, the cluster-side computation copes better. The same amount of data still has to be examined, but less data moves.
+It's clear that if data volumes increase, the cluster-side computation copes better. The same amount of data still has to be examined, but less data moves across the network.
 
 .Client `JuniorDeveloper.java`
 [%collapsible]
