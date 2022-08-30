@@ -185,7 +185,7 @@ The sum of the square of the differences is calculated on the client-side like t
 include::standard-deviation:example$client/src/main/java/your/company/name/JuniorDeveloper.java[tag=stdev]
 ----
 
-link:{github-directory}/client/src/main/java/your/company/name/JuniorDeveloper.java[View source]
+link:{github-directory}/tree/master/client/src/main/java/your/company/name/JuniorDeveloper.java[View source]
 ====
 
 .Client `SeniorDeveloper.java`
@@ -218,7 +218,7 @@ Finally, the task is submitted across each member in the cluster, which results 
 
 WARNING: The code in this example disregards concurrency. Step 1 calculates the average, then step 2 calculates the deviation from the average. It is possible that records are added or removed between step 1 and 2, which makes the calculation wrong.
 
-link:{github-directory}/client/src/main/java/your/company/name/SeniorDeveloper.java[View source]
+link:{github-directory}/tree/master/client/src/main/java/your/company/name/SeniorDeveloper.java[View source]
 ====
 
 [[step-two]]
