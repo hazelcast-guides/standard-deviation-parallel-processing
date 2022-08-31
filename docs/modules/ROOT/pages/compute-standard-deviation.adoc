@@ -235,7 +235,7 @@ In this step, you'll use the Hazelcast {hazelcast-cloud} Maven plugin to package
 |Element|Location in Hazelcast {hazelcast-cloud} console
 
 |`<clusterName>`
-|Go to *Connect Your Application* > *Advanced setup*. The cluster name is at the top of the list.
+|Go to *Connect Client* > *Advanced setup*. The cluster name is at the top of the list.
 
 |`<apiKey>` and `<apiSecret>`
 |
@@ -269,7 +269,7 @@ Now that the cluster-side modules are ready to use, you can run the client to tr
 
 . Open the link:{page-cloud-console}[Hazelcast {hazelcast-cloud} console].
 
-. Go to *Connect Your Application* > *Advanced setup*, and click *Download keystore file*.
+. Go to *Connect Client* > *Advanced setup*, and click *Download keystore file*.
 
 . Extract the files and copy the `client.keystore` and `client.truststore` files to the `client/src/main/resources` directory.
 
@@ -283,7 +283,7 @@ Now that the cluster-side modules are ready to use, you can run the client to tr
 mvn clean compile exec:java@standard-deviation -Dexec.cleanupDaemonThreads=false
 ```
 
-. When prompted, enter the cluster name, keystore password, and discovery token for your cluster. These details are in the *Adavnced setup* tab in the Hazelcast {hazelcast-cloud} console.
+. When prompted, enter the cluster name, keystore password, and discovery token for your cluster. These details are in the *Advanced setup* tab in the Hazelcast {hazelcast-cloud} console.
 
 The client connects to the cluster and calculates the standard deviation, using both the junior developer code and the senior developer code.
 
