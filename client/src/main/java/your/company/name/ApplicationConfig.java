@@ -29,7 +29,7 @@ public class ApplicationConfig {
         clientConfig.getNetworkConfig().getCloudConfig()
             .setDiscoveryToken(clusterDiscoveryToken)
             .setEnabled(true);
-        clientConfig.setProperty("hazelcast.client.cloud.url", "https://api.viridian.hazelcast.cloud");
+        clientConfig.setProperty("hazelcast.client.cloud.url", "https://api.viridian.hazelcast.com");
 
         return clientConfig;
     }
