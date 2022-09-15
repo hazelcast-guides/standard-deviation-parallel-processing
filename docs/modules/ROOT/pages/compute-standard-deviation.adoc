@@ -99,11 +99,11 @@ The standard deviation results prove that the first set of numbers doesn't vary 
 In this tutorial, you'll deploy the following to a {hazelcast-cloud} Serverless cluster:
 
 - A `Customer` class to store `Customer` objects in a map. The objects will include a customer satisfaction score.
-- An entry processor that the cluster will use to calculate the standard deviation of all customer satisfaction scores in the map.
+- An executor that the cluster will use to calculate the standard deviation of all customer satisfaction scores in the map.
 
 You'll then use a client to connect to the cluster, load some `Customer` objects into a map, and calculate the standard deviation of all customer satisfaction scores.
 
-The client code shows both the junior developer and senior developer approach. The junior developer approach does the processing on the client-side. The senior developer approach is more efficient because it offloads the processing to the {hazelcast-cloud} Serverless cluster, using the entry processor.
+The client code shows both the junior developer and senior developer approach. The junior developer approach does the processing on the client-side. The senior developer approach is more efficient because it offloads the processing to the {hazelcast-cloud} Serverless cluster, using the executor.
 
 TIP: The code in this tutorial is available as a link:{github-directory}[sample app on GitHub].
 
@@ -323,7 +323,7 @@ Disconnecting the Hazelcast client
 
 In this tutorial, you learned how to do the following:
 
-- Use an entry processor to process data in parallel on a {hazelcast-cloud} Serverless cluster.
+- Use an executor to process data in parallel on a {hazelcast-cloud} Serverless cluster.
 - Deploy cluster-side modules to a {hazelcast-cloud} Serverless cluster using the Hazelcast {hazelcast-cloud} Maven plugin.
 
 == Learn More
