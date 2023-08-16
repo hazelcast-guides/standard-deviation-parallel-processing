@@ -5,7 +5,7 @@
 :page-lang: java
 :page-est-time: 30 mins
 :page-serverless: true
-:description: In this tutorial, you'll build an application that calculates the standard deviation of customer satisfaction scores, using code that's executed on each member of a Hazelcast Viridian cluster.
+:description: In this tutorial, you'll build an application that calculates the standard deviation of customer satisfaction scores, using code that's executed on each member of a Viridian Cloud cluster.
 :github-directory: https://github.com/hazelcast-guides/standard-deviation-parallel-processing
 
 {description}
@@ -96,14 +96,14 @@ Examples:
 
 The standard deviation results prove that the first set of numbers doesn't vary as much as the second set.
 
-In this tutorial, you'll deploy the following to a {hazelcast-cloud} Serverless cluster:
+In this tutorial, you'll deploy the following to a {hazelcast-cloud} Standard cluster:
 
 - A `Customer` class to store `Customer` objects in a map. The objects will include a customer satisfaction score.
 - An executor that the cluster will use to calculate the standard deviation of all customer satisfaction scores in the map.
 
 You'll then use a client to connect to the cluster, load some `Customer` objects into a map, and calculate the standard deviation of all customer satisfaction scores.
 
-The client code shows both the junior developer and senior developer approach. The junior developer approach does the processing on the client-side. The senior developer approach is more efficient because it offloads the processing to the {hazelcast-cloud} Serverless cluster, using the executor.
+The client code shows both the junior developer and senior developer approach. The junior developer approach does the processing on the client-side. The senior developer approach is more efficient because it offloads the processing to the {hazelcast-cloud} Standard cluster, using the executor.
 
 TIP: The code in this tutorial is available as a link:{github-directory}[sample app on GitHub].
 
@@ -111,7 +111,7 @@ TIP: The code in this tutorial is available as a link:{github-directory}[sample 
 
 You'll need the following to complete this tutorial:
 
-- A xref:cloud:ROOT:create-serverless-cluster.adoc[{hazelcast-cloud} Serverless cluster].
+- A xref:cloud:ROOT:create-serverless-cluster.adoc[{hazelcast-cloud} Standard cluster].
 - link:https://git-scm.com/book/en/v2/Getting-Started-Installing-Git[Git]
 - link:https://maven.apache.org/install.html[Maven]
 - JDK 8, 9, or 11 installed and set up as the `JAVA_HOME` environment variable.
@@ -232,10 +232,10 @@ In this step, you'll use the Hazelcast {hazelcast-cloud} Maven plugin to package
 +
 [cols="1a,1a"]
 |===
-|Element|Location in Hazelcast {hazelcast-cloud} console
+|Element|Location in {hazelcast-cloud} console
 
 |`<clusterName>`
-|Go to *Connect Client* > *Advanced setup*. The cluster name is at the top of the list.
+|Next to *Connect Client*, select any client and go to *Advanced setup*. The cluster name/ID is at the top of the list.
 
 |`<apiKey>` and `<apiSecret>`
 |
@@ -267,13 +267,15 @@ The file is uploaded and is ready to be used:
 
 Now that the cluster-side modules are ready to use, you can run the client to trigger the process of calculating the standard deviation of customer satisfaction scores.
 
-. Open the link:{page-cloud-console}[Hazelcast {hazelcast-cloud} console].
+. Open the link:{page-cloud-console}[{hazelcast-cloud} console].
 
-. Go to *Connect Client* > *Advanced setup*, and click *Download keystore file*.
+. Next to *Connect Client*, select any client.
+
+. Select *Advanced setup* and click *Download keystore file*.
 
 . Extract the files and copy the `client.keystore` and `client.truststore` files to the `client/src/main/resources` directory.
 
-. Leave the Hazelcast {hazelcast-cloud} console open. You'll need some of these details in next steps.
+. Leave the {hazelcast-cloud} console open. You'll need some of these details in next steps.
 
 . Change into the `client/` directory.
 
@@ -283,7 +285,7 @@ Now that the cluster-side modules are ready to use, you can run the client to tr
 mvn clean compile exec:java@standard-deviation -Dexec.cleanupDaemonThreads=false
 ```
 
-. When prompted, enter the cluster name, keystore password, and discovery token for your cluster. These details are in the *Advanced setup* tab in the Hazelcast {hazelcast-cloud} console.
+. When prompted, enter the cluster name, keystore password, and discovery token for your cluster. These details are in the *Advanced setup* tab in the {hazelcast-cloud} console.
 
 The client connects to the cluster and calculates the standard deviation, using both the junior developer code and the senior developer code.
 
@@ -323,8 +325,8 @@ Disconnecting the Hazelcast client
 
 In this tutorial, you learned how to do the following:
 
-- Use an executor to process data in parallel on a {hazelcast-cloud} Serverless cluster.
-- Deploy cluster-side modules to a {hazelcast-cloud} Serverless cluster using the Hazelcast {hazelcast-cloud} Maven plugin.
+- Use an executor to process data in parallel on a {hazelcast-cloud} Standard cluster.
+- Deploy cluster-side modules to a {hazelcast-cloud} Standard cluster using the Hazelcast {hazelcast-cloud} Maven plugin.
 
 == Learn More
 
