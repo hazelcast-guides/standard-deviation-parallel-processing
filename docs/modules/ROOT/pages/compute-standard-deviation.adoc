@@ -4,7 +4,6 @@
 :page-categories: In-Memory Computing
 :page-lang: java
 :page-est-time: 30 mins
-:page-serverless: true
 :description: In this tutorial, you'll build an application that calculates the standard deviation of customer satisfaction scores, using code that's executed on each member of a Hazelcast Viridian cluster.
 :github-directory: https://github.com/hazelcast-guides/standard-deviation-parallel-processing
 
