@@ -69,9 +69,9 @@
             <plugin>
                 <groupId>com.hazelcast.cloud</groupId>
                 <artifactId>hazelcast-cloud-maven-plugin</artifactId>
-                <version>0.0.5</version>
+                <version>0.2.0</version>
                 <configuration>
-                    <clusterName></clusterName>
+                    <clusterId></clusterId>
                     <apiKey></apiKey>
                     <apiSecret></apiSecret>
                 </configuration>

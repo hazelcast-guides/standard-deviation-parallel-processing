@@ -21,14 +21,14 @@
 	<name>Standard Deviation</name>
 
 	<properties>
-		<hazelcast.version>5.1.2</hazelcast.version>
+		<hazelcast.version>5.3.0</hazelcast.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<exec-maven-plugin.version>1.6.0</exec-maven-plugin.version>
 		<maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
 		<maven.compiler.plugin.version>3.8.0</maven.compiler.plugin.version>
 		<maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
 		<maven.assembly.plugin.version>3.1.1</maven.assembly.plugin.version>
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>11</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.assembly.plugin.version>3.1.1</maven.assembly.plugin.version>
 	</properties>
