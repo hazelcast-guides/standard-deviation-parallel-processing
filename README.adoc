@@ -9,7 +9,7 @@ TIP: For step-by-step instructions of how to run this app, see the link:https://
 
 . Add the required elements for `hazelcast-cloud-maven-plugin` in `cluster-side/pom.xml`:
 
-- `clusterName`: Name of your cluster
+- `clusterId`: Id of your cluster
 
 - `apiKey`: API key
 
