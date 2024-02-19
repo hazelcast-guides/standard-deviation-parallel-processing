@@ -10,7 +10,7 @@ import com.hazelcast.map.IMap;
  * </p>
  * <ol>
  *    <li> Ask the user of the command prompt for the
- *    connection details of a Hazelcast Viridian cluster.
+ *    connection details of a Hazelcast Cloud cluster.
  *    </li>
  *    <li>Load some test data.
  *    </li>

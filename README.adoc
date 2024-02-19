@@ -45,7 +45,7 @@ If you want to try this application in the UAT or DEV environment, edit the `cli
 clientConfig.setProperty("hazelcast.client.cloud.url", "https://uat.hazelcast.cloud");
 ```
 
-Then, add the following element to the configuration block for the Hazelcast Viridian Maven plugin in the `compute/standard-deviation/cluster-side/pom.xml` file. Configure this element with the same environment URL.
+Then, add the following element to the configuration block for the Hazelcast {hazelcast-cloud} Maven plugin in the `compute/standard-deviation/cluster-side/pom.xml` file. Configure this element with the same environment URL.
 
 ```xml
 <plugin>
