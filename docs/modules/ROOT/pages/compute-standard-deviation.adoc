@@ -4,7 +4,7 @@
 :page-categories: In-Memory Computing
 :page-lang: java
 :page-est-time: 30 mins
-:description: In this tutorial, you'll build an application that calculates the standard deviation of customer satisfaction scores, using code that's executed on each member of a Viridian Cloud cluster.
+:description: In this tutorial, you'll build an application that calculates the standard deviation of customer satisfaction scores, using code that's executed on each member of a Hazelcast Cloud cluster.
 :github-directory: https://github.com/hazelcast-guides/standard-deviation-parallel-processing
 
 {description}
@@ -113,7 +113,7 @@ You'll need the following to complete this tutorial:
 - A xref:cloud:ROOT:create-serverless-cluster.adoc[{hazelcast-cloud} Standard cluster].
 - link:https://git-scm.com/book/en/v2/Getting-Started-Installing-Git[Git]
 - link:https://maven.apache.org/install.html[Maven]
-- JDK 8, 9, or 11 installed and set up as the `JAVA_HOME` environment variable.
+- JDK 17 or later installed and set up as the `JAVA_HOME` environment variable.
 
 [[step-one]]
 == Step 1. Clone the Sample
