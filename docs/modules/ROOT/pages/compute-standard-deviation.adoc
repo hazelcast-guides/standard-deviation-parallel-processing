@@ -238,7 +238,7 @@ In this step, you'll use the Hazelcast {hazelcast-cloud} Maven plugin to package
 
 |`<apiKey>` and `<apiSecret>`
 |
-include::cloud:ROOT:developer.adoc[tag=create]
+include::cloud:ROOT:partial$create-api-key.adoc[tag=create]
 
 |===
 +
